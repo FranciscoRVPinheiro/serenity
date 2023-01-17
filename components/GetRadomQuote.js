@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import {Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {Text, StyleSheet, TouchableWithoutFeedback, View} from 'react-native';
 
 
 export default function GetRandomQuote(){
@@ -25,12 +25,12 @@ export default function GetRandomQuote(){
   }, [""]);
 
   return (
-    <>
-        <TouchableOpacity style={styles.container} onPress={getQuote}> 
-          <Text style={styles.textQuote}>{quote}</Text>
-          <Text style={styles.textAuthor}>{author}</Text>
-        </TouchableOpacity>
-    </>
+        <TouchableWithoutFeedback  onPress={getQuote}> 
+          <View style={styles.container}>
+            <Text style={styles.textQuote}>{quote}</Text>
+            <Text style={styles.textAuthor}>{author}</Text>
+          </View>
+        </TouchableWithoutFeedback>
   )
 }
 
@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
         textAlign:'center',
         fontStyle: 'italic',
         fontFamily: 'sans-serif-thin',
+        margin: 10
 
   },      
   textAuthor: {

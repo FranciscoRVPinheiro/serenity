@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import Header from './components/Header'
-import GetRandomQuote from './components/GetRadom'
+import GetRandomQuote from './components/GetRadomQuote'
 
 export default function YourApp() {
 
@@ -21,6 +21,6 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#23272f',
+         backgroundColor: '#0b0f24',
   }
 })

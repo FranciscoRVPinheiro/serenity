@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: 'white',
         marginTop: 35,
-        fontSize: 28,
+        fontSize: 30,
         fontFamily: 'sans-serif-thin',
         paddingTop: 10 
 
