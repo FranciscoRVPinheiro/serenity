@@ -1,19 +1,37 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
-import Header from './components/Header'
+import {StyleSheet} from 'react-native'
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 import GetRandomQuote from './components/GetRadomQuote'
+import About from './components/About';
+
+const Stack = createNativeStackNavigator();
+
 
 export default function YourApp() {
 
   return (
+    <NavigationContainer style={styles.container}>
 
-    <View
-      style={styles.container}>
-      <Header />  
-      <GetRandomQuote />
-    </View>
+      <Stack.Navigator
+        initialRouteName="Quote"
+        screenOptions={{
+          headerTitleAlign: "center",
+          headerStyle: {
+            backgroundColor: "#0b0f24",
+          },
+          headerTitleStyle: {
+            fontFamily: "sans-serif-thin",
+          },
+        }}
+      >
+        <Stack.Screen name="Serenity" component={GetRandomQuote} />
+        <Stack.Screen name="About" component={About} />
+      </Stack.Navigator>
 
-  )
+    </NavigationContainer>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -21,6 +39,6 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-         backgroundColor: '#0b0f24',
+        backgroundColor: '0f24#0b',
   }
 })
