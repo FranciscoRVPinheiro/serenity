@@ -13,9 +13,8 @@ export default function YourApp() {
 
   return (
     <NavigationContainer style={styles.container}>
-
       <Stack.Navigator
-        initialRouteName="Quote"
+        initialRouteName="Serenity"
         screenOptions={{
           headerTitleAlign: "center",
           headerStyle: {
@@ -29,7 +28,6 @@ export default function YourApp() {
         <Stack.Screen name="Serenity" component={GetRandomQuote} />
         <Stack.Screen name="About" component={About} />
       </Stack.Navigator>
-
     </NavigationContainer>
   );
 }
